@@ -1,0 +1,823 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+  
+}
+
+.all-conten{
+    background-color: black;
+}
+
+/* navbar*/
+#navbar{
+    background-color: black;
+    padding-left: 60px;
+    font-weight: bolder;
+}
+
+
+
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 60px;
+    font-weight: bolder;
+    background: black; /* Solid black by default */
+    opacity: 1; /* Fully visible */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#navbar:not(:hover):not(:focus-within) {
+    opacity: 0.7; /* Lower opacity when not hovered or focused */
+}
+
+
+
+#dropdown-menu{
+    background-color:orange;
+    color: white;
+    border-radius: 15PX;
+}
+
+#dropdown-item:hover{
+    color: orange;
+}
+#dropdown-item{
+
+  background-color: #f8f9fa; /* Light background color */
+  border-radius: 10px;
+
+  border: 1px solid #000;   /* Inner border */
+  padding: .2px;            /* Space inside the border */
+  margin: .2px;             /* Space outside the element */
+ text-align: center;
+ margin-bottom: 5px;
+
+padding: 2px;
+border: 10px solid #000;
+margin-bottom:5px ;
+}
+
+/*About*/
+
+
+#logo{
+    font-size: 23px;
+    color: rgba(180,130,25,1);
+ 
+}
+#logo img{
+    margin-bottom: 15px;
+    border-radius: 70px;
+}
+.navbar-nav{
+    margin-left: 15px;
+}
+.nav-link{
+    color: rgba(180,130,25,1);
+    font-weight: bold;
+    text-shadow:  1px 1px 1px orange;
+    margin-left: 15px;
+    transition: 0.5s ease;
+}
+
+.nav-link:hover{
+    background-color: rgba(161,109,14,1);
+    color: white;
+    border-radius: 5px;
+}
+.icons{
+    margin-left: 30px;
+}
+.icons img{
+    margin-left: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.icons img:hover{
+    transform: translateY(-5px);
+}
+
+
+/*home section*/
+
+.home {
+   
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 88.5vh;
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/sunflower.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+   position: relative;
+   z-index: 0;
+   
+}
+
+.home .content{
+    flex: 1 1 400px;
+    margin-left: 60px;
+}
+
+.content h3 {
+  
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px orange;
+}
+
+.content p{
+
+ font-size: 20px;
+}
+.content h2 {
+    font-size: 50px;
+    color:wheat;
+    text-shadow: 1px 1px 1px orange;
+    font-weight: bold;
+}
+
+.changecontent::after{
+    content: '';
+    color:gold;
+    animation: changetext 10s infinite linear;
+    font-weight:bold;
+}
+
+@keyframes changetext{
+    0%{content: "Flower Pot";}
+    20%{content: "Flower Standing";}
+    40%{content: "Flower Spray";}
+    60%{content: "Flower Basket";}
+    80%{content: "Flower Bouquet";}
+    100%{content: "Flower Corona";}
+}
+
+.content p {
+    color: whitesmoke;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+
+.content .btn {
+    width: 145px;
+    height: 48px;
+    background-color: orange;
+    color: whitesmoke;
+}
+.content .btn:hover{
+   background-color: violet;
+}
+
+.content a {
+    font-size: 25px;
+}
+
+
+
+/*top cards*/
+#box{
+    margin-top: 50px;
+}
+
+.video-container video {
+    width: 100%;
+    border: 1.5rem solid white;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1) ;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#box .card{
+    box-shadow: 0px 0px 5ox black;
+}
+
+.card {
+    flex: 1 1 40rem;
+    position: relative;
+} 
+.row .card{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.row .content {
+    flex: 1 1 40rem;
+}
+
+.row .card  h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: black;
+    background: white;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+#box .card{
+    margin-top: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#box .card:hover{
+    transform: translateY(-10px);
+}
+
+
+/*banner*/
+
+.banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image:  url(img/background.png);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 10px black;
+    margin-top: 50px;
+  
+}
+
+.banner .img {
+    flex: 1 1 400px;
+}
+
+.banner .img img {
+    width: 100%;
+}
+.banner .content{
+    flex: 1 1 400px;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+.banner .content h3{
+    color:  rgba(180,130,25,1);
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+.banner .content h2{
+    color:  rgba(180,130,25,1);
+   
+    text-shadow: 1px 1px 1px black;
+}
+
+#btnorder button{
+    width: 150px;
+    height: 32px;
+    letter-spacing: 5px;
+    background-color: rgba(180,130,25,1) ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:800px){
+    .banner .content h3{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:855px){
+    .banner {
+        height: 100vh;
+    }
+}
+
+
+
+@media screen and (max-width:800px){
+    .content h3{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:860px){
+    .home{
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width:560px){
+    .home{
+        height: 100vh;
+    }
+}
+
+
+@media screen and (max-width:560px){
+    .content h2{
+       font-size: 30px;
+    }
+
+    .content h3{
+        font-size: 30px;
+     }
+}
+
+
+
+
+/*navbar media*/
+@media screen and (max-width:330px){
+#logo{
+    font-size: 15px;
+}
+}
+
+
+
+/*#dropdown-item*/
+
+@media screen and (max-width: 800px) {
+    #dropdown-item {
+        width: 90%; /* Use a percentage to make it responsive */
+        max-width: 280px; /* Set a reasonable max width */
+        margin: 0 auto; /* Centers the dropdown */
+        padding: 5px; /* Adjust padding */
+        border: 2px solid #000; /* Reduce border thickness */
+        text-align: center; /* Align text properly */
+        padding: 2px;
+        border: 10px solid #000;
+        margin-bottom:5px ;
+    }
+
+    .dropdown {
+        width: 100%; /* Make dropdown responsive */
+        max-width: 400px; /* Prevent it from being too large */
+        margin: 0 auto; /* Centers the dropdown */
+    }
+}
+
+
+/*product cards*/
+#product-cards h1{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    color: rgba(180,130,25,1);
+    text-shadow: 1px 1px 1px black;
+    border-bottom: 2px solid rgba(180,130,25,1);
+}
+
+#product-cards .card{
+    background-color:rgba(180,130,25,1) ;
+    box-sizing: 0 0 3px black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.overlay{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    margin-left: 0;
+    width: 70px;
+
+}
+#product-cards .card:hover .overlay{
+    opacity: 1;
+    margin-left: 5%;
+    transition: 0.5s ease;
+}
+
+.overlay i .img{
+    background-color: #2e1700;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    padding: 7px;
+    margin:-20%;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+.overlay .btn-secondary{
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+}
+#product-cards h3{
+    text-shadow: 1px 1px 1px black;
+}
+
+.star .checked{
+    color: yellow;
+
+}
+#product-cards p{
+    color: white;
+    font-weight: bold;
+}
+#product-cards h6{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+#product-cards h6 span button{
+    width: 120px;
+    height: 26px;
+    font-size: 15px;
+    background: transparent;
+    letter-spacing: 3px;
+    border: 3px solid brown;
+    font-weight: bold;
+    transition: 0.5 ease;
+    cursor: pointer;
+    color: white;
+    float: right;
+}
+#product-cards h6 span button:hover {
+    background-color: orange;
+}
+#productimg img{
+    justify-content: center;
+}
+
+
+.product-image {
+    width: 100%;  /* Makes the image responsive */
+    max-width: 300px; /* Ensures it doesn’t exceed a certain size */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
+.product-standing {
+    width: 100%;  /* Ensures the image adapts to the container width */
+    max-width: 300px; /* Limits the maximum width */
+    height: 300px; /* Sets a fixed height */
+    
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+/*About*/
+#about{
+    margin-top: 50px;
+}
+#about h3{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    color:  rgba(180,130,25,1);
+    text-shadow: 1px 1px 1px black;
+    border-bottom: 2px solid rgba(180,130,25,1);
+}
+
+#about .card{
+    background-color:rgba(180,130,25,1) ;
+    box-sizing: 0px 0px 5px black;
+    font-size: 16px;
+}
+
+#about p, ul{
+    color: black;
+    text-shadow: 1px 1px 1px black;
+}
+
+#bt button{
+    width: 150px;
+    height: 32px;
+    letter-spacing: 3px;
+    background-color:rgba(180,130,25,1);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width:1000px){
+    #about p {
+        font-size: 10px;
+
+    }
+}
+
+@media screen and (max-width:760px){
+    #about p {
+        font-size: 20px;
+        
+    }
+}
+
+
+/*Contact*/
+#contact{
+    margin-top: 100px;
+}
+#contact h1{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    color:rgba(180,130,25,1) ;
+    text-shadow: 1px 1px 1px black;
+    border: 2px solid rgba(180,130,25,1);
+}
+
+#contact input{
+    background-color:wheat;
+}
+#contact input ::placeholder{
+    color: white;
+}
+
+#contact textarea{
+    background-color:rgba(180,130,25,1) ;
+}
+
+#contact textarea::placeholder{
+    color: wheat;
+}
+
+#messagebtn{
+    text-align: center;
+}
+
+#messagebtn button{
+    width: 200px;
+    height: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    background:transparent;
+    border: 2px solid black;
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#messagebtn button:hover{
+background-color:rgba(180,130,25,1);
+}
+
+
+/*footert*/
+#footer {
+    width: 100%;
+    background-color: rgba(180,130,25,1);
+    box-shadow: 0px 0px 5px wheat;
+    margin-top: 100px;
+}
+
+#footer h1{
+    color: white;
+    padding-top: 30px;
+}
+
+#footer p{
+    color: white;
+}
+.icons i{
+    background-color: white;
+    color: #573818;
+    border-radius: 50px;
+    padding: 6px;
+    font-size: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.icons i:hover{
+    background-color:rgba(180,130,25,1);
+    color: white;
+}
+.copyright{
+    color: white;
+    margin-top: 20px;
+}
+.creditte{
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+.arrow{
+    position: fixed;
+    background-color: rgba(180,130,25,1);
+    border: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
+
+footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center sections */
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+}
+
+footer .box-container .box {
+    flex: 1;
+    min-width: 200px; /* Prevents excessive shrinking */
+    text-align: left; 
+}
+
+/* Ensure proper spacing and prevent unnecessary shifting */
+footer .box-container .box:first-child {
+    margin-right: 0; 
+}
+
+footer .box-container .box h3 {
+    color: white;
+    font-size: 18px;
+    padding-bottom: 0.5rem;
+}
+
+footer .box-container .box a, 
+footer .box-container .box p {
+    display: block;
+    color: white;
+    font-size: 16px;
+    padding: 0.2rem 0;
+    text-decoration: none;
+}
+
+footer .box-container .box a:hover {
+    color: orange;
+}
+
+footer .box-container .box i {
+    font-size: 1.5rem; /* Increase icon size */
+    color: white;
+    display: inline-block; /* Ensures icons are not hidden */
+    margin-right: 0.5rem; /* Adds spacing between icon and text */
+    vertical-align: middle; /* Aligns icons properly */
+}
+
+
+
+
+
+
+
+#icons i {
+    font-size: 3rem; /* Ensure icons are large enough */
+   
+    margin: 0.5rem; /* Space between icons */
+    display: inline-block; /* Ensures icons are inline */
+}
+
+#icons {
+    text-align: center; /* Centers the icons */
+    padding: 1rem;
+}
+
+#icons i:hover {
+    color: orange; /* Change color on hover */
+}
+
+#icons i {
+    font-size: 1rem; /* Ensure icons are big enough */
+   
+    margin: 1rem;
+}
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+
+
+/* Medium devices (tablets) */
+@media (max-width: 1024px) {
+    #icons i {
+        font-size: 3.5rem; /* Slightly larger on tablets */
+    }
+}
+
+/* Small devices (phones) */
+@media (max-width: 768px) {
+    #icons i {
+        font-size: 2rem; /* Increase the size on mobile */
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    #icons i {
+        font-size: 2.5rem; /* Make icons bigger on very small devices */
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    footer .box-container {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .box-container .box {
+        min-width: 100%; /* Make boxes full width */
+    }
+
+    footer .box-container .box:first-child {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    footer .box-container {
+        padding: 1rem;
+    }
+
+    footer .box-container .box h3 {
+        font-size: 16px;
+    }
+
+    footer .box-container .box a, 
+    footer .box-container .box p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*product respomnsive*/
+
+
+@media (max-width: 768px) { /* Tablets */
+    .container {
+        padding: 0 15px;
+    }
+
+    .card {
+        width: 100%; /* Make cards take full width */
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .product-img {
+        max-width: 300px; /* Make images smaller */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile Devices */
+    .card {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .product-img {
+        max-width: 250px;
+    }
+
+    .btn-add {
+        width: 100%; /* Make buttons full width */
+        font-size: 14px;
+    }
+}
